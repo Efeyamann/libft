@@ -6,7 +6,7 @@
 /*   By: esir <esir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:59:14 by esir              #+#    #+#             */
-/*   Updated: 2024/10/30 14:57:26 by esir             ###   ########.fr       */
+/*   Updated: 2024/11/11 12:36:27 by esir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,26 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*a;
 	int		first;
 	int		last;
-	int		first_flag;
-	int		last_flag;
+	int		i;
 
-	last = ft_strlen(s1) - 1;
+	i = 0;
+	if (!s1 || !set)
+		return (NULL);
 	first = 0;
-	first_flag = 0;
-	last_flag = 0;
-	while ((first < last) && (first_flag == 0 || last_flag == 0))
+	last = ft_strlen(s1) - 1;
+	while (s1[first] && ft_strchr(set, s1[first]) != NULL)
+		first++;
+	while (last >= first && ft_strchr(set, s1[last]) != NULL)
+		last--;
+	a = (char *)malloc((last - first + 2) * sizeof(char));
+	if (!a)
+		return (NULL);
+	while (first <= last)
 	{
-		if ((ft_strchr(set, s1[first]) != NULL) && (first_flag == 0))
-			first++;
-		else
-			first_flag = 1;
-		if ((ft_strchr(set, s1[last]) != NULL) && (last_flag == 0))
-			last--;
-		else
-			last_flag = 1;
+		a[i] = s1[first];
+		i++;
+		first++;
 	}
-	a = (char *)malloc((last - first + 1) * sizeof(char));
+	a[i] = '\0';
 	return (a);
 }

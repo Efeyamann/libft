@@ -6,7 +6,7 @@
 /*   By: esir <esir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:36:04 by esir              #+#    #+#             */
-/*   Updated: 2024/10/30 12:58:38 by esir             ###   ########.fr       */
+/*   Updated: 2024/11/11 13:21:49 by esir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	l = 0;
 	a = (char *)malloc(k * sizeof(char));
+	if (a == NULL)
+		return (NULL);
 	while (s1[j])
 	{
 		a[l++] = s1[j++];

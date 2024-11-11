@@ -6,14 +6,13 @@
 /*   By: esir <esir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 16:53:51 by esir              #+#    #+#             */
-/*   Updated: 2024/11/03 17:00:55 by esir             ###   ########.fr       */
+/*   Updated: 2024/11/11 16:31:36 by esir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <unistd.h>
 
-void	write_number(int number, int fd)
+static void	write_number(int number, int fd)
 {
 	char	x;
 
@@ -21,8 +20,13 @@ void	write_number(int number, int fd)
 	write(fd, &x, 1);
 }
 
-void	divide(int n, int fd)
+static void	divide(int n, int fd)
 {
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
 	if (n >= 0 && n <= 9)
 	{
 		write_number((n), fd);
@@ -30,7 +34,7 @@ void	divide(int n, int fd)
 	}
 	if (n < 0)
 	{
-		write(1, "-", 1);
+		write(fd, "-", 1);
 		divide((-n), fd);
 		return ;
 	}

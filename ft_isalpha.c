@@ -6,13 +6,11 @@
 /*   By: esir <esir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 12:18:09 by esir              #+#    #+#             */
-/*   Updated: 2024/10/14 13:53:33 by esir             ###   ########.fr       */
+/*   Updated: 2024/11/11 16:32:48 by esir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isalpha(unsigned char c)
+int	ft_isalpha(int c)
 {
 	if (c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z')
 	{

@@ -6,13 +6,11 @@
 /*   By: esir <esir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 12:26:26 by esir              #+#    #+#             */
-/*   Updated: 2024/10/14 13:53:27 by esir             ###   ########.fr       */
+/*   Updated: 2024/11/11 16:32:41 by esir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isdigit(unsigned char c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 	{

@@ -6,13 +6,11 @@
 /*   By: esir <esir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 12:30:16 by esir              #+#    #+#             */
-/*   Updated: 2024/10/14 13:53:36 by esir             ###   ########.fr       */
+/*   Updated: 2024/11/11 16:32:52 by esir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isalnum(unsigned char c)
+int	ft_isalnum(int c)
 {
 	if (c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z' || c >= '0' && c <= '9')
 	{

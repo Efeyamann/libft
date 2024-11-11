@@ -6,7 +6,7 @@
 /*   By: esir <esir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:51:01 by esir              #+#    #+#             */
-/*   Updated: 2024/11/04 13:53:24 by esir             ###   ########.fr       */
+/*   Updated: 2024/11/09 17:24:24 by esir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,4 @@ void	*ft_memset(void *b, int c, size_t len)
 		i++;
 	}
 	return (b);
-}
-
-#include <stdio.h>
-int main()
-{
-	//negatif sayıların da mantığını anla
-	int a[] = {-120, 46, 89};
-	ft_memset(a, 254, 8);
-	printf("%d\n", a[0]);
-	printf("%d\n", a[1]);
-	printf("%d", a[2]);
 }

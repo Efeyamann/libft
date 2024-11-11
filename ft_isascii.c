@@ -6,13 +6,11 @@
 /*   By: esir <esir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 12:35:39 by esir              #+#    #+#             */
-/*   Updated: 2024/10/14 13:53:30 by esir             ###   ########.fr       */
+/*   Updated: 2024/11/11 16:32:44 by esir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isascii(unsigned char c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 	{

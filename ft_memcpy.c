@@ -6,7 +6,7 @@
 /*   By: esir <esir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:53:59 by esir              #+#    #+#             */
-/*   Updated: 2024/10/17 15:24:24 by esir             ###   ########.fr       */
+/*   Updated: 2024/11/11 13:37:28 by esir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	i;
-	char	*a;
-	char	*b;
+	size_t		i;
+	char		*a;
+	const char	*b;
 
+	if ((dst == NULL && src == NULL) && n > 0)
+		return (NULL);
 	a = (char *)dst;
-	b = (char *)src;
+	b = (const char *)src;
 	i = 0;
 	while (i < n)
 	{

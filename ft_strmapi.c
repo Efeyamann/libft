@@ -6,19 +6,11 @@
 /*   By: esir <esir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:34:39 by esir              #+#    #+#             */
-/*   Updated: 2024/11/04 17:37:38 by esir             ###   ########.fr       */
+/*   Updated: 2024/11/11 13:44:03 by esir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	lower(unsigned int n, char c)
-{
-	(void)n;
-	c = c + 32;
-	return (c);
-}
-
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -36,12 +28,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	a[i] = '\0';
 	return (a);
-}
-
-#include <stdio.h>
-
-int main()
-{
-	char a[] = "MERHABA";
-	printf("%s", ft_strmapi(a, lower));
 }
