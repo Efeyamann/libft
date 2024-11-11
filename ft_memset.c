@@ -6,7 +6,7 @@
 /*   By: esir <esir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:51:01 by esir              #+#    #+#             */
-/*   Updated: 2024/11/09 17:24:24 by esir             ###   ########.fr       */
+/*   Updated: 2024/11/11 18:41:39 by esir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	char	*a;
-	size_t	i;
+	unsigned char	*a;
+	size_t			i;
 
 	i = 0;
-	a = (char *)b;
+	a = (unsigned char *)b;
 	while (i < len)
 	{
-		a[i] = (char)c;
+		a[i] = (unsigned char)c;
 		i++;
 	}
-	return (b);
+	return (a);
 }

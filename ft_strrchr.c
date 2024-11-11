@@ -6,7 +6,7 @@
 /*   By: esir <esir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 13:41:51 by esir              #+#    #+#             */
-/*   Updated: 2024/11/11 12:44:22 by esir             ###   ########.fr       */
+/*   Updated: 2024/11/11 19:52:53 by esir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ char	*ft_strrchr(const char *s, int c)
 
 	i = ft_strlen(s);
 	if (c == 0)
-		return ((unsigned char *)&s[i]);
+		return ((char *)&s[i]);
 	while (i >= 0)
 	{
-		if ((unsigned char)s[i] == (unsigned char)c)
+		if (s[i] == (char)c)
 		{
-			return ((unsigned char *)&s[i]);
+			return ((char *)&s[i]);
 		}
 		i--;
 	}

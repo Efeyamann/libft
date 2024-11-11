@@ -45,7 +45,7 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 %.o: %.c
-	$(CC) $(CLFAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)
@@ -55,4 +55,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean
+.PHONY: all bonus clean fclean re

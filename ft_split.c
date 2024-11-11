@@ -6,7 +6,7 @@
 /*   By: esir <esir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 19:14:58 by esir              #+#    #+#             */
-/*   Updated: 2024/11/09 17:23:53 by esir             ###   ########.fr       */
+/*   Updated: 2024/11/11 19:53:49 by esir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,6 @@ char	**ft_split(char const *s, char c)
 {
 	int		substring_count;
 	char	**ptr;
-	int		start;
 
 	substring_count = count_substrings(s, c);
 	ptr = (char **)malloc((substring_count + 1) * sizeof(char *));
